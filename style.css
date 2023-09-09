@@ -23,8 +23,6 @@ body {
     height: 700px;
     border: 8px solid pink;
     background-color: white;
-
-    /* overflow: hidden; */
 }
 
 #candy {
