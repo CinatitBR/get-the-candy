@@ -2,6 +2,10 @@ export class Sprite {
     // HTML node related to this object.
     node;
 
+    // Numbers: the left and top css values.
+    left;
+    top;
+
     /*
         string selector: the element selector, might be a .class or #id.
     */
@@ -26,14 +30,15 @@ export class Sprite {
 
     // Set node position.
     setPosition(left, top) {
+        this.left = left;
+        this.top = top;
+
         this.node.style.left = left + "px";
         this.node.style.top = top + "px";
     }
 
     // Move object by a offset: x and y
     move(x, y) {
-        const pos = this.getPosition();
-
-        this.setPosition(pos.left + x, pos.top + y);
+        this.setPosition(this.left + x, this.top + y);
     }
 }
